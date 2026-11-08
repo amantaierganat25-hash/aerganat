@@ -1,0 +1,425 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(201, 148, 42);
+}
+
+.information {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 21;
+    gap: 20px;
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255);
+    height: 120px;
+    align-items: center;
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
+
+.logo-name {
+    height: 100px;
+}
+
+.buttons {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 5%;
+    font-size: 130%;
+    text-decoration: none;
+    color: rgb(12, 37, 71);
+    font-weight: 700;
+}
+
+.buttons:hover {
+    color: rgb(58, 124, 215);
+}
+
+
+.photo-of-city-background {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.05;
+    height: 290%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200%;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+.box-of-mission {
+    background: linear-gradient(to right, rgba(219, 151, 48, 0.925), rgba(255, 247, 95, 0.733));
+    border: 2px solid rgba(255, 255, 255, 0.167);
+    border-radius: 25px;
+    width: 1320px;
+    max-width: calc(100% - 48px);
+    box-sizing: border-box;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+    padding: 60px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.296);
+    margin-top: 100px;
+}
+
+.photo-mission {
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.248);
+}
+
+.mission-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: aliceblue;
+}
+
+.mission-text {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+}
+
+.about-mission {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    display: inline-block;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.our-team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 260px);
+    max-width: 1250px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 35px 35px;
+    justify-content: center;
+    height: auto; 
+    padding: 50px; 
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 250%;
+    color: white;
+}
+
+.team-worker {
+    font-family: 'Inter', sans-serif;
+    background-color: #0b131f; 
+    width: 260px; /* Фиксированная ширина карточки */
+    padding: 25px; /* Равномерные внутренние отступы со всех сторон */
+    border-radius: 20px; /* Красивое скругление углов */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+    justify-content: center;
+    text-align: center;
+    height: max-content;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.399);
+    border: 2px solid rgba(255, 255, 255, 0.452);
+    transition: transform 0.2s ease-in-out;
+}
+
+.team-worker:hover {
+    transform: translateY(-5px);
+}
+
+.photo-of-workers {
+    width: 90px; /* Фиксированная ширина круга */
+    height: 90px; /* Фиксированная высота круга */
+    border-radius: 50%; /* Идеальный круг */
+    object-fit: cover; /* Лица футболистов не будут сжиматься или растягиваться */
+    margin-bottom: 20px;
+}
+
+.about-workers {
+    color: #a0aec0; /* Мягкий серый цвет для описания, как на макете */
+    font-size: 14px;
+    font-weight: 400; /* Обычная толщина текста */
+    line-height: 1.4; /* Комфортное расстояние между строками текста */
+    text-align: left;
+}
+
+.team-names {
+    color: white;
+}
+
+.div-of-footer {
+    background-color: #454545;
+    height: 200px;
+    z-index: 15;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.footer-text {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    bottom: -100%;
+}
+
+/* ===== МЕНЮ (на десктопе обычная шапка, бургер скрыт) ===== */
+.information { box-sizing: border-box; }
+.menu { display: contents; }
+.menu-toggle, .burger { display: none; }
+
+/* ===== АДАПТИВ ===== */
+
+/* планшеты и небольшие ноутбуки */
+@media (max-width: 1024px) {
+    .information {
+        height: 88px;
+        padding: 0 24px;
+        gap: 14px;
+    }
+
+    .logo-name { height: 68px; }
+
+    .buttons {
+        margin-left: 2%;
+        font-size: 115%;
+    }
+
+    header { margin-top: 88px; }
+
+    .box-of-mission {
+        margin-top: 40px;
+        padding: 40px;
+    }
+
+    h2 { margin-top: 60px; }
+}
+
+@media (max-width: 900px) {
+    .box-of-mission {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .about-mission br { display: none; }
+
+    .photo-mission {
+        aspect-ratio: 16 / 9;
+        max-height: 320px;
+        object-fit: cover;
+    }
+}
+
+/* телефоны */
+@media (max-width: 768px) {
+    html, body { overflow-x: hidden; }
+
+    /* шапка с бургером */
+    .information {
+        height: 64px;
+        padding: 0 16px;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .logo-name {
+        height: 44px;
+        display: block;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+        width: 1px;
+        height: 1px;
+    }
+
+    .burger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        margin-left: auto;
+        border-radius: 10px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .burger span,
+    .burger span::before,
+    .burger span::after {
+        display: block;
+        width: 24px;
+        height: 3px;
+        border-radius: 2px;
+        background: rgb(12, 37, 71);
+        transition: transform 0.25s ease, background 0.2s ease;
+    }
+
+    .burger span { position: relative; }
+
+    .burger span::before,
+    .burger span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .burger span::before { top: -8px; }
+    .burger span::after { top: 8px; }
+
+    .menu-toggle:checked + .burger span { background: transparent; }
+    .menu-toggle:checked + .burger span::before { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle:checked + .burger span::after { transform: translateY(-8px) rotate(-45deg); }
+
+    .menu-toggle:focus-visible + .burger {
+        outline: 3px solid #f1c40f;
+        outline-offset: 2px;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #ffffff;
+        padding: 4px 16px 12px;
+        border-top: 1px solid #e3e8ef;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-toggle:checked ~ .menu { display: flex; }
+
+    .menu .buttons {
+        margin: 0;
+        padding: 14px 4px;
+        font-size: 17px;
+        border-bottom: 1px solid #eef1f5;
+    }
+
+    .menu .buttons:last-child { border-bottom: 0; }
+
+    /* фон-город на телефоне не нужен */
+    .photo-of-city-background { display: none; }
+
+    /* миссия */
+    header {
+        margin-top: 64px;
+        padding: 20px 16px 0;
+        box-sizing: border-box;
+    }
+
+    .box-of-mission {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        gap: 18px;
+        padding: 22px 18px;
+        border-radius: 20px;
+    }
+
+    .mission-info { gap: 12px; }
+
+    .mission-text { font-size: 24px; }
+
+    .about-mission {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .photo-mission {
+        max-height: 200px;
+        border-radius: 16px;
+    }
+
+    /* команда: компактные строки вместо больших карточек */
+    h2 {
+        margin: 32px 16px 0;
+        font-size: 26px;
+    }
+
+    .our-team {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 18px 16px 32px;
+    }
+
+    .team-worker {
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        column-gap: 12px;
+        row-gap: 2px;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        padding: 12px;
+        text-align: left;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .photo-of-workers {
+        grid-row: 1 / span 2;
+        width: 56px;
+        height: 56px;
+        margin: 0;
+    }
+
+    .team-names {
+        grid-column: 2;
+        align-self: end;
+        font-size: 15px;
+        line-height: 1.25;
+    }
+
+    .about-workers {
+        grid-column: 2;
+        align-self: start;
+        font-size: 12.5px;
+        line-height: 1.3;
+    }
+
+    /* подвал */
+    .div-of-footer { height: 90px; }
+    .footer-text { font-size: 140%; }
+}
+
+@media (max-width: 600px) {
+    .our-team { grid-template-columns: 1fr; }
+}
+
+@media (hover: none) {
+    .team-worker:hover { transform: none; }
+}

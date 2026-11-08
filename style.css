@@ -1,0 +1,783 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(39, 84, 46);
+    background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.information {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    gap: 20px;
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255);
+    height: 120px;
+    align-items: center;
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
+
+.logo-name {
+    height: 100px;
+}
+
+.buttons {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 5%;
+    font-size: 130%;
+    text-decoration: none;
+    color: rgb(12, 37, 71);
+    font-weight: 700;
+}
+
+.buttons:hover {
+    color: rgb(58, 124, 215);
+}
+
+.about-company {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Центрирует всю группу текстов по вертикали */
+    align-items: center;       /* ИДЕАЛЬНО ЦЕНТРИРУЕТ ТЕКСТЫ ПО ЛИНИИ ЦЕНТРА ЭКРАНА */
+    text-align: center;        /* Выравнивает строки внутри самих текстовых тегов по центру */
+    row-gap: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;          /* Жирное начертание (Bold) */
+    font-size: 20px;           /* Размер можете подстроить под себя */
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    padding-top: 145px;
+    background:
+        radial-gradient(circle at 50% 30%, rgba(86,160,99,.35), transparent 60%),
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px) 0 0 / 40px 40px,
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px) 0 0 / 40px 40px;
+}
+
+.about-company::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px) 0 0 / 40px 40px,
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px) 0 0 / 40px 40px;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+.construction-machinery {
+    position: absolute;
+    top: 50%;
+    left: -1%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 1;
+    max-width: 550px;
+    pointer-events: none;   /* добавь эту строку */
+}
+
+.over-buildings-count {
+    background-color: rgb(29, 77, 36);
+    padding: 12px;
+    font-size: 17px;
+    border-radius: 25px;
+    color: rgb(191, 226, 197);
+}
+
+.Descriptions {
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 80%;
+    margin-top: -20px;
+}
+
+.search-block-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 125px;
+}
+
+.aerganat-toggle-input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.aerganat-select {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.aerganat-search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px 8px 25px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 30px;
+    transition: border-radius 0.2s ease;
+    box-sizing: border-box;
+}
+
+.aerganat-toggle-input:checked ~ .aerganat-select-inner .aerganat-search-header {
+    border-radius: 30px 30px 0 0;
+}
+
+.aerganat-placeholder {
+    color: #666666;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.aerganat-search-btn {
+    background-color: #f1c40f;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease, background-color 0.2s ease;
+}
+
+.aerganat-search-header:hover .aerganat-search-btn {
+    transform: scale(1.08);
+    background-color: #f39c12;
+}
+
+.aerganat-toggle-input:checked ~ .aerganat-select-inner .aerganat-search-btn {
+    transform: rotate(15deg) scale(1.05);
+}
+
+.aerganat-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #162e1e;
+    border: 1px solid #254a31;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.3s ease;
+}
+
+.aerganat-toggle-input:checked ~ .aerganat-select-inner .aerganat-dropdown {
+    max-height: 400px;
+    opacity: 1;
+    padding: 8px 0;
+}
+
+.aerganat-dropdown-title {
+    padding: 8px 20px;
+    font-size: 11px;
+    color: #61876e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.aerganat-link {
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.aerganat-link:hover {
+    background-color: #1e3a27;
+    color: #f1c40f;
+}
+
+.aerganat-toggle-input:focus-visible ~ .aerganat-select-inner .aerganat-search-header {
+    outline: 3px solid #f1c40f;
+    outline-offset: 2px;
+}
+
+.container-ach {
+    background-color: #5a704c;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.achievements-count {
+    font-family: 'Inter', sans-serif;
+    color: rgb(190, 236, 197);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.achievements {
+    font-size: 185%;
+}
+
+.number-of-achievements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    gap: 16px 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box; /* отступ по краям всей секции */
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.box-nmb {
+    width: 220px;
+    background-color: #162e1e;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Выравнивает контент по левому краю */
+    padding-left: 30px;
+    justify-content: center;
+    text-align: center;
+    height: 125px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.box-nmb:hover {
+    transform: scale(1.1);
+}
+
+.first-text {
+    color: #f1a90f;
+}
+
+.second-text {
+    color: #3f7a52;
+    font-size: 75%;
+}
+
+h4 {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 250%;
+}
+
+.text-after-h4 {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 110%;
+    margin-top: -1%;
+    font-weight: 500;
+}
+
+.animated-logo {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #385743;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.brands-for-animated {
+    width: max-content;
+    gap: 80px;
+    display: flex;
+    animation: scrollBrands 15s linear infinite;
+}
+
+.brands-for-animated span {
+    font-family: 'Inter', sans-serif; /* Поменяйте шрифт на свой, если нужно */
+    font-size: 30px;                  /* Размер текста брендов */
+    color: #ffffff;                   /* Цвет текста */
+    white-space: nowrap;           /* Запрещает тексту переноситься на новую строку */
+}
+
+.animated-logo:hover .brands-for-animated {
+    animation-play-state: paused;
+}
+
+@keyframes scrollBrands {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Сдвигает ровно на половину длины всей ленты */
+        transform: translateX(-50%);
+    }
+}
+
+/* ===== ФУТЕР ===== */
+.site-footer {
+    position: relative;
+    margin-top: 200px;
+    padding: 0 40px 0;
+    background: linear-gradient(180deg, #162e1e 0%, #0f2016 100%);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* жёлтая полоса, наполовину выступающая над футером */
+.footer-cta {
+    max-width: 1100px;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 34px 44px;
+    border-radius: 24px;
+    background: linear-gradient(to right, #f1a90f, #fbbf24);
+    box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.55);
+}
+
+.footer-cta-text b {
+    display: block;
+    font-size: 24px;
+    color: #162e1e;
+    margin-bottom: 6px;
+}
+
+.footer-cta-text span {
+    font-size: 15px;
+    color: #4a3a05;
+}
+
+.footer-cta-btn {
+    flex-shrink: 0;
+    padding: 14px 30px;
+    border-radius: 30px;
+    background: #162e1e;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-cta-btn:hover {
+    transform: translateY(-3px);
+    background: #254a31;
+}
+
+/* колонки */
+.footer-grid {
+    max-width: 1100px;
+    margin: -10px auto 0;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1.4fr 1.4fr;
+    gap: 40px;
+}
+
+.footer-col h5 {
+    margin: 0 0 18px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #f1c40f;
+}
+
+.footer-col a,
+.footer-col span {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #a9c7b2;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-col a:hover {
+    color: #f1c40f;
+    transform: translateX(4px);
+}
+
+.footer-about p {
+    margin: 14px 0 22px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #8fb29a;
+    max-width: 300px;
+}
+
+.footer-col a.footer-logo {
+    display: inline-block;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+.footer-col a.footer-logo:hover {
+    transform: none;
+    color: #f1c40f;
+}
+
+/* соцсети */
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-col .footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin: 0;
+    border-radius: 50%;
+    border: 1px solid #254a31;
+    background: #1c3a27;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer-col .footer-social a:hover {
+    background: #f1c40f;
+    border-color: #f1c40f;
+    color: #162e1e;
+    transform: translateY(-4px);
+}
+
+/* нижняя строка */
+.footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #254a31;
+    font-size: 13px;
+    color: #61876e;
+}
+
+.to-top {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #254a31;
+    color: #a9c7b2;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.to-top:hover {
+    background: #f1c40f;
+    border-color: #f1c40f;
+    color: #162e1e;
+}
+
+/* ===== МЕНЮ (на десктопе обычная шапка, бургер скрыт) ===== */
+.information { box-sizing: border-box; }
+.menu { display: contents; }
+.menu-toggle, .burger { display: none; }
+
+/* ===== АДАПТИВ ===== */
+
+/* планшеты и небольшие ноутбуки */
+@media (max-width: 1024px) {
+    .information {
+        height: 88px;
+        padding: 0 24px;
+        gap: 14px;
+    }
+
+    .logo-name { height: 68px; }
+
+    .buttons {
+        margin-left: 2%;
+        font-size: 115%;
+    }
+
+    .about-company { padding-top: 125px; }
+
+    /* погрузчик на планшетах налезает на текст — убираем */
+    .construction-machinery { display: none; }
+
+    h4 { font-size: 200%; }
+
+    .site-footer { padding: 0 24px; }
+}
+
+@media (max-width: 900px) {
+    .footer-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 24px;
+    }
+
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* телефоны */
+@media (max-width: 768px) {
+    html, body { overflow-x: hidden; }
+
+    /* шапка с бургером */
+    .information {
+        height: 64px;
+        padding: 0 16px;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .logo-name {
+        height: 44px;
+        display: block;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+        width: 1px;
+        height: 1px;
+    }
+
+    .burger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        margin-left: auto;
+        border-radius: 10px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .burger span,
+    .burger span::before,
+    .burger span::after {
+        display: block;
+        width: 24px;
+        height: 3px;
+        border-radius: 2px;
+        background: rgb(12, 37, 71);
+        transition: transform 0.25s ease, background 0.2s ease;
+    }
+
+    .burger span { position: relative; }
+
+    .burger span::before,
+    .burger span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .burger span::before { top: -8px; }
+    .burger span::after { top: 8px; }
+
+    .menu-toggle:checked + .burger span { background: transparent; }
+    .menu-toggle:checked + .burger span::before { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle:checked + .burger span::after { transform: translateY(-8px) rotate(-45deg); }
+
+    .menu-toggle:focus-visible + .burger {
+        outline: 3px solid #f1c40f;
+        outline-offset: 2px;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #ffffff;
+        padding: 4px 16px 12px;
+        border-top: 1px solid #e3e8ef;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-toggle:checked ~ .menu { display: flex; }
+
+    .menu .buttons {
+        margin: 0;
+        padding: 14px 4px;
+        font-size: 17px;
+        border-bottom: 1px solid #eef1f5;
+    }
+
+    .menu .buttons:last-child { border-bottom: 0; }
+
+    /* главный экран */
+    .about-company {
+        padding: 96px 20px 0;
+        row-gap: 14px;
+        box-sizing: border-box;
+    }
+
+    .about-company h1 {
+        margin: 0;
+        font-size: 26px;
+        line-height: 1.25;
+    }
+
+    .over-buildings-count {
+        font-size: 14px;
+        padding: 9px 14px;
+    }
+
+    .Descriptions {
+        margin-top: 0;
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    /* декоративный погрузчик на телефоне не помещается — убираем */
+    .construction-machinery { display: none; }
+
+    .search-block-wrapper {
+        max-width: none;
+        width: auto;
+        margin: 26px 16px 44px;
+    }
+
+    .aerganat-placeholder { font-size: 14px; }
+
+    /* достижения: 2x2 вместо 8 карточек подряд */
+    .container-ach { padding-bottom: 28px; }
+
+    .achievements { font-size: 100%; }
+
+    .achievements-count {
+        padding: 28px 16px 0;
+        margin: 0;
+        font-size: 22px;
+    }
+
+    .number-of-achievements {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .box-nmb {
+        width: 100%;
+        height: 96px;
+        padding: 12px 16px;
+    }
+
+    .box-nmb:nth-child(n+5) { display: none; }
+
+    .first-text { font-size: 24px; }
+    .second-text { font-size: 13px; }
+
+    /* нам доверяют */
+    h4 {
+        margin: 36px 16px 14px;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .text-after-h4 {
+        margin: 0;
+        padding: 0 20px;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .text-after-h4 br { display: none; }
+
+    .animated-logo {
+        margin: 26px 0 40px;
+        padding: 14px 0;
+    }
+
+    .brands-for-animated { gap: 40px; }
+    .brands-for-animated span { font-size: 20px; }
+
+    /* подвал компактнее */
+    .site-footer {
+        margin-top: 100px;
+        padding: 0 16px;
+    }
+
+    .footer-cta {
+        gap: 16px;
+        padding: 22px 18px;
+    }
+
+    .footer-cta-text b { font-size: 19px; }
+    .footer-cta-text span { font-size: 14px; }
+
+    .footer-cta-btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 18px;
+        padding-bottom: 28px;
+    }
+
+    .footer-about { grid-column: 1 / -1; }
+    .footer-about p { max-width: none; margin: 10px 0 16px; }
+
+    /* колонку «Направления» прячем, она дублирует поиск */
+    .footer-grid .footer-col:nth-child(3) { display: none; }
+
+    .footer-col a,
+    .footer-col span {
+        margin-bottom: 9px;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .about-company h1 { font-size: 23px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .first-text { font-size: 21px; }
+}
+
+/* на сенсорных экранах убираем hover-прыжки */
+@media (hover: none) {
+    .box-nmb:hover,
+    .footer-col a:hover,
+    .footer-cta-btn:hover { transform: none; }
+}

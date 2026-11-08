@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты / AERGANAT СК Компания</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <header>
+        <nav class="information">
+            <a class="company-name" href="index.html">
+                <img class="logo-name" src="logoza.ru.png" alt="logo">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
+            <label for="menu-toggle" class="burger" aria-label="Меню"><span></span></label>
+            <div class="menu">
+                <a class="buttons" href="about.html">О нас</a>
+                <a class="buttons" href="client.html">Клиентам</a>
+                <a class="buttons" href="job.html">Работа</a>
+                <a class="buttons active" href="contacs.html">Контакты</a>
+            </div>
+        </nav>
+    </header>
+    <main class="page-main">
+        <section class="page-hero">
+            <div class="wrap">
+                <span class="crumbs"><a href="index.html">Главная</a> / Контакты</span>
+                <h1 class="page-title">Контакты</h1>
+                <p class="page-lead">Свяжитесь удобным способом, и мы ответим в течение рабочего дня.</p>
+            </div>
+        </section>
+
+        <section class="section section-band">
+            <div class="wrap">
+                <div class="grid grid-4 contact-cards">
+                    <article class="card"><span class="card-icon">📍</span><h3>Адрес</h3><p>г. Астана,<br>ул. Примерная, 1, офис 101</p></article>
+                    <article class="card"><span class="card-icon">📞</span><h3>Телефон</h3><p><a href="tel:+70000000000">+7 (000) 000-00-00</a></p></article>
+                    <article class="card"><span class="card-icon">✉</span><h3>Почта</h3><p><a href="mailto:info@aerganat.kz">info@aerganat.kz</a></p></article>
+                    <article class="card"><span class="card-icon">🕘</span><h3>График</h3><p>Пн-Пт, 9:00-18:00<br>Сб-Вс выходной</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap split">
+                <div class="form-card">
+                    <h2 class="section-title" style="font-size: 24px;">Написать нам</h2>
+                    <form data-form>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="name">Имя</label>
+                                <input id="name" name="name" type="text" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="field">
+                                <label for="phone">Телефон или почта</label>
+                                <input id="phone" name="phone" type="text" placeholder="Как с вами связаться" required>
+                            </div>
+                            <div class="field full">
+                                <label for="msg">Сообщение</label>
+                                <textarea id="msg" name="msg" placeholder="Ваш вопрос" required></textarea>
+                            </div>
+                            <button class="btn full" type="submit" style="grid-column: 1 / -1;">Отправить</button>
+                        </div>
+                    </form>
+                    <div class="form-ok" hidden>Спасибо! Сообщение отправлено, мы скоро ответим.</div>
+                </div>
+                <div>
+                    <div class="map-box">
+                        <iframe title="Карта: Астана" loading="lazy"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=71.30%2C51.07%2C71.60%2C51.22&amp;layer=mapnik"></iframe>
+                    </div>
+                    <div class="messengers">
+                        <a href="#">Telegram</a>
+                        <a href="#">WhatsApp</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+    <div class="footer-cta">
+        <div class="footer-cta-text">
+            <b>Готовы обсудить ваш проект?</b>
+            <span>Оставьте заявку, и мы свяжемся с вами в течение дня.</span>
+        </div>
+        <a href="client.html#request" class="footer-cta-btn">Оставить заявку</a>
+    </div>
+
+    <div class="footer-grid">
+        <div class="footer-col footer-about">
+            <a href="index.html" class="footer-logo">AERGANAT</a>
+            <p>Символ вашего успеха. Строим надёжно, в срок и с гарантией на все работы.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Telegram">TG</a>
+                <a href="#" aria-label="WhatsApp">WA</a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h5>Меню</h5>
+            <a href="about.html">О нас</a>
+            <a href="client.html">Клиентам</a>
+            <a href="job.html">Работа</a>
+            <a href="contacs.html">Контакты</a>
+        </div>
+
+        <div class="footer-col">
+            <h5>Направления</h5>
+            <a href="client.html#services">Жилые комплексы и дома</a>
+            <a href="client.html#services">Промышленные объекты</a>
+            <a href="client.html#services">Инфраструктура и дороги</a>
+            <a href="client.html#services">Проектирование и дизайн</a>
+        </div>
+
+        <div class="footer-col">
+            <h5>Контакты</h5>
+            <span>📍 Казахстан, г. Астана</span>
+            <a href="tel:+70000000000">📞 +7 (000) 000-00-00</a>
+            <a href="mailto:info@aerganat.kz">✉ info@aerganat.kz</a>
+            <span>🕘 Пн-Пт, 9:00-18:00</span>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 СК «AERGANAT». Все права защищены.</span>
+        <a href="#" class="to-top">Наверх ↑</a>
+    </div>
+</footer>
+    <script>
+    // Формы пока не отправляют данные на сервер: показываем сообщение об успехе.
+    document.querySelectorAll('form[data-form]').forEach(function (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            form.reset();
+            var ok = form.parentElement.querySelector('.form-ok');
+            if (ok) ok.hidden = false;
+        });
+    });
+    // Кнопка «Откликнуться» подставляет должность в форму
+    document.querySelectorAll('.apply-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var sel = document.getElementById('position');
+            if (sel) sel.value = btn.dataset.pos;
+        });
+    });
+</script>
+</body>
+</html>

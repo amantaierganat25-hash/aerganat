@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа / AERGANAT СК Компания</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <header>
+        <nav class="information">
+            <a class="company-name" href="index.html">
+                <img class="logo-name" src="logoza.ru.png" alt="logo">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
+            <label for="menu-toggle" class="burger" aria-label="Меню"><span></span></label>
+            <div class="menu">
+                <a class="buttons" href="about.html">О нас</a>
+                <a class="buttons" href="client.html">Клиентам</a>
+                <a class="buttons active" href="job.html">Работа</a>
+                <a class="buttons" href="contacs.html">Контакты</a>
+            </div>
+        </nav>
+    </header>
+    <main class="page-main">
+        <section class="page-hero">
+            <div class="wrap">
+                <span class="crumbs"><a href="index.html">Главная</a> / Работа</span>
+                <h1 class="page-title">Работа в AERGANAT</h1>
+                <p class="page-lead">Присоединяйтесь к команде, которая строит города. Ищем прорабов, инженеров и тех, кто хочет научиться.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="#vacancies">Смотреть вакансии</a>
+                    <a class="btn btn-ghost" href="#apply">Отправить резюме</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-band">
+            <div class="wrap">
+                <h2 class="section-title">Почему у нас</h2>
+                <p class="section-sub">Что вы получаете, работая в компании.</p>
+                <div class="grid grid-4">
+                    <article class="card"><span class="card-icon">🤝</span><h3>Стабильность</h3><p>Крупные объекты по всему РК.</p></article>
+                    <article class="card"><span class="card-icon">📄</span><h3>Оформление</h3><p>Официальный договор по ТК РК.</p></article>
+                    <article class="card"><span class="card-icon">🎓</span><h3>Обучение</h3><p>Стажировка рядом с опытными прорабами.</p></article>
+                    <article class="card"><span class="card-icon">📈</span><h3>Рост</h3><p>Лучшие стажёры становятся помощниками руководителей.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="vacancies">
+            <div class="wrap">
+                <h2 class="section-title">Открытые вакансии</h2>
+                <p class="section-sub">Оплата обсуждается на собеседовании.</p>
+                <div class="grid grid-3">
+                    <article class="card vac">
+                        <div class="vac-head"><h3>Прораб</h3><div class="tags"><span class="tag">Объекты</span><span class="tag">Полный день</span></div></div>
+                        <p>Ведёт участок, следит за сроками и качеством работ.</p>
+                        <a class="btn btn-sm apply-btn" href="#apply" data-pos="Прораб">Откликнуться</a>
+                    </article>
+                    <article class="card vac">
+                        <div class="vac-head"><h3>Инженер-сметчик</h3><div class="tags"><span class="tag">Офис</span><span class="tag">Полный день</span></div></div>
+                        <p>Считает сметы и сопровождает договоры с клиентами.</p>
+                        <a class="btn btn-sm apply-btn" href="#apply" data-pos="Инженер-сметчик">Откликнуться</a>
+                    </article>
+                    <article class="card vac">
+                        <div class="vac-head"><h3>Бухгалтер</h3><div class="tags"><span class="tag">Офис</span><span class="tag">Полный день</span></div></div>
+                        <p>Ведёт учёт по компаниям группы и объектам.</p>
+                        <a class="btn btn-sm apply-btn" href="#apply" data-pos="Бухгалтер">Откликнуться</a>
+                    </article>
+                    <article class="card vac">
+                        <div class="vac-head"><h3>Оператор спецтехники</h3><div class="tags"><span class="tag">Объекты</span><span class="tag">Сменный график</span></div></div>
+                        <p>Работа на погрузчике и другой строительной технике.</p>
+                        <a class="btn btn-sm apply-btn" href="#apply" data-pos="Оператор спецтехники">Откликнуться</a>
+                    </article>
+                    <article class="card vac">
+                        <div class="vac-head"><h3>Монтажник</h3><div class="tags"><span class="tag">Объекты</span><span class="tag">Полный день</span></div></div>
+                        <p>Строительно-монтажные работы на объектах компании.</p>
+                        <a class="btn btn-sm apply-btn" href="#apply" data-pos="Монтажник">Откликнуться</a>
+                    </article>
+                    <article class="card vac">
+                        <div class="vac-head"><h3>Стажёр</h3><div class="tags"><span class="tag">Без опыта</span><span class="tag">Обучение</span></div></div>
+                        <p>Учим на реальных объектах, лучшие остаются в штате.</p>
+                        <a class="btn btn-sm apply-btn" href="#apply" data-pos="Стажёр">Откликнуться</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-band" id="apply">
+            <div class="wrap split">
+                <div>
+                    <h2 class="section-title">Отправить отклик</h2>
+                    <p class="section-sub">Расскажите о себе, и мы пригласим на собеседование.</p>
+                    <ul class="ticks">
+                        <li>Отвечаем в течение 2–3 рабочих дней</li>
+                        <li>Рассматриваем и без опыта</li>
+                        <li>Резюме можно прислать ссылкой</li>
+                    </ul>
+                </div>
+                <div class="form-card">
+                    <form data-form>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="name">Имя</label>
+                                <input id="name" name="name" type="text" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="field">
+                                <label for="phone">Телефон</label>
+                                <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                            <div class="field full">
+                                <label for="position">Должность</label>
+                                <select id="position" name="position">
+                                    <option>Прораб</option>
+                                    <option>Инженер-сметчик</option>
+                                    <option>Бухгалтер</option>
+                                    <option>Оператор спецтехники</option>
+                                    <option>Монтажник</option>
+                                    <option>Стажёр</option>
+                                    <option>Другая</option>
+                                </select>
+                            </div>
+                            <div class="field full">
+                                <label for="msg">О себе</label>
+                                <textarea id="msg" name="msg" placeholder="Опыт, образование, ссылка на резюме"></textarea>
+                            </div>
+                            <button class="btn full" type="submit" style="grid-column: 1 / -1;">Отправить отклик</button>
+                        </div>
+                        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+                    </form>
+                    <div class="form-ok" hidden>Спасибо! Мы получили ваш отклик и скоро свяжемся.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+    <div class="footer-cta">
+        <div class="footer-cta-text">
+            <b>Готовы обсудить ваш проект?</b>
+            <span>Оставьте заявку, и мы свяжемся с вами в течение дня.</span>
+        </div>
+        <a href="client.html#request" class="footer-cta-btn">Оставить заявку</a>
+    </div>
+
+    <div class="footer-grid">
+        <div class="footer-col footer-about">
+            <a href="index.html" class="footer-logo">AERGANAT</a>
+            <p>Символ вашего успеха. Строим надёжно, в срок и с гарантией на все работы.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Telegram">TG</a>
+                <a href="#" aria-label="WhatsApp">WA</a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h5>Меню</h5>
+            <a href="about.html">О нас</a>
+            <a href="client.html">Клиентам</a>
+            <a href="job.html">Работа</a>
+            <a href="contacs.html">Контакты</a>
+        </div>
+
+        <div class="footer-col">
+            <h5>Направления</h5>
+            <a href="client.html#services">Жилые комплексы и дома</a>
+            <a href="client.html#services">Промышленные объекты</a>
+            <a href="client.html#services">Инфраструктура и дороги</a>
+            <a href="client.html#services">Проектирование и дизайн</a>
+        </div>
+
+        <div class="footer-col">
+            <h5>Контакты</h5>
+            <span>📍 Казахстан, г. Астана</span>
+            <a href="tel:+70000000000">📞 +7 (000) 000-00-00</a>
+            <a href="mailto:info@aerganat.kz">✉ info@aerganat.kz</a>
+            <span>🕘 Пн-Пт, 9:00-18:00</span>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 СК «AERGANAT». Все права защищены.</span>
+        <a href="#" class="to-top">Наверх ↑</a>
+    </div>
+</footer>
+    <script>
+    // Формы пока не отправляют данные на сервер: показываем сообщение об успехе.
+    document.querySelectorAll('form[data-form]').forEach(function (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            form.reset();
+            var ok = form.parentElement.querySelector('.form-ok');
+            if (ok) ok.hidden = false;
+        });
+    });
+    // Кнопка «Откликнуться» подставляет должность в форму
+    document.querySelectorAll('.apply-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var sel = document.getElementById('position');
+            if (sel) sel.value = btn.dataset.pos;
+        });
+    });
+</script>
+</body>
+</html>

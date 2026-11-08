@@ -1,0 +1,514 @@
+/* ===== Общие стили внутренних страниц: Клиентам / Работа / Контакты ===== */
+/* Подключается ПОСЛЕ style.css (шапка, бургер и подвал берутся оттуда) */
+
+.page-main {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.buttons.active { color: rgb(58, 124, 215); }
+
+/* ---------- верхний блок страницы ---------- */
+.page-hero {
+    padding: 170px 0 70px;
+    background: radial-gradient(circle at 50% 0%, rgba(86, 160, 99, .35), transparent 62%);
+}
+
+.crumbs {
+    font-size: 14px;
+    color: #a9c7b2;
+}
+
+.crumbs a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+.page-title {
+    margin: 14px 0;
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.page-lead {
+    max-width: 640px;
+    margin: 0 0 26px;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #d8eadd;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.chip {
+    padding: 9px 16px;
+    border-radius: 25px;
+    background: rgb(29, 77, 36);
+    color: rgb(191, 226, 197);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ---------- кнопки ---------- */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 0;
+    border-radius: 30px;
+    background: linear-gradient(to right, #f1a90f, #fbbf24);
+    color: #162e1e;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .3);
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid #61876e;
+    color: #ffffff;
+}
+
+.btn-ghost:hover { background: rgba(255, 255, 255, .08); box-shadow: none; }
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* ---------- секции ---------- */
+.section { padding: 70px 0; }
+
+.section-band { background: #5a704c; }
+
+.section-title {
+    margin: 0 0 8px;
+    font-size: 32px;
+    line-height: 1.2;
+    text-align: left;
+    color: #ffffff;
+}
+
+.section-sub {
+    margin: 0 0 30px;
+    font-size: 16px;
+    color: #bfe2c5;
+}
+
+/* ---------- сетки и карточки ---------- */
+.grid { display: grid; gap: 18px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+    background: #162e1e;
+    border: 1px solid #254a31;
+    border-radius: 18px;
+    padding: 24px;
+    box-sizing: border-box;
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #f1c40f;
+}
+
+.card-icon {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+.card h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #a9c7b2;
+}
+
+.card a:not(.btn) {
+    color: #f1c40f;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+/* ---------- этапы работы ---------- */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+}
+
+.step {
+    position: relative;
+    padding-top: 56px;
+}
+
+.step::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #f1a90f;
+    color: #162e1e;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 54px;
+    right: 8px;
+    height: 2px;
+    background: #254a31;
+}
+
+.step h3 { margin: 0 0 6px; font-size: 16px; }
+.step p { margin: 0; font-size: 14px; line-height: 1.5; color: #a9c7b2; }
+
+/* ---------- вопросы и ответы ---------- */
+.faq {
+    display: grid;
+    gap: 12px;
+    max-width: 820px;
+}
+
+.faq details {
+    padding: 0 20px;
+    background: #162e1e;
+    border: 1px solid #254a31;
+    border-radius: 14px;
+}
+
+.faq summary {
+    position: relative;
+    padding: 18px 30px 18px 0;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #f1c40f;
+}
+
+.faq details[open] summary::after { content: "–"; }
+
+.faq details p {
+    margin: 0 0 18px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #a9c7b2;
+}
+
+/* ---------- блок «текст + форма» ---------- */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 36px;
+    align-items: start;
+}
+
+.ticks {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    font-size: 15px;
+    color: #d8eadd;
+}
+
+.ticks li::before {
+    content: "✔";
+    margin-right: 10px;
+    color: #f1c40f;
+}
+
+.form-card {
+    padding: 28px;
+    background: #162e1e;
+    border: 1px solid #254a31;
+    border-radius: 22px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+    box-sizing: border-box;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field.full { grid-column: 1 / -1; }
+
+.field label { font-size: 13px; color: #a9c7b2; }
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    background: #0f2016;
+    border: 1px solid #254a31;
+    border-radius: 12px;
+    color: #ffffff;
+    font: inherit;
+    font-size: 16px;
+}
+
+.field textarea { min-height: 96px; resize: vertical; }
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: 2px solid #f1c40f;
+    outline-offset: 1px;
+}
+
+.form-grid .btn { width: 100%; }
+
+.form-note {
+    margin: 12px 0 0;
+    font-size: 12px;
+    color: #61876e;
+}
+
+.form-ok {
+    margin-top: 14px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: #1e3a27;
+    color: #bfe2c5;
+    font-size: 15px;
+}
+
+.form-ok[hidden] { display: none; }
+
+/* ---------- вакансии ---------- */
+.vac {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vac-head { display: grid; gap: 8px; }
+.vac h3 { margin: 0; }
+.vac p { margin: 0; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #1e3a27;
+    color: #bfe2c5;
+    font-size: 12px;
+}
+
+.vac .btn { margin-top: auto; align-self: flex-start; }
+
+/* ---------- контакты ---------- */
+.map-box {
+    min-height: 320px;
+    border: 1px solid #254a31;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #162e1e;
+}
+
+.map-box iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: 0;
+}
+
+.messengers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.messengers a {
+    padding: 10px 18px;
+    border: 1px solid #254a31;
+    border-radius: 25px;
+    background: #1c3a27;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .2s ease, color .2s ease;
+}
+
+.messengers a:hover { background: #f1c40f; color: #162e1e; }
+
+/* на внутренних страницах подвал ближе к контенту */
+@media (min-width: 769px) {
+    .site-footer { margin-top: 110px; }
+}
+
+/* ===== планшеты ===== */
+@media (max-width: 1024px) {
+    .page-hero { padding: 130px 0 56px; }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .split { grid-template-columns: 1fr; gap: 24px; }
+
+    .steps { grid-template-columns: 1fr; gap: 20px; }
+
+    .step { padding: 4px 0 4px 58px; min-height: 42px; }
+
+    .step:not(:last-child)::after {
+        top: 46px;
+        bottom: -20px;
+        left: 20px;
+        right: auto;
+        width: 2px;
+        height: auto;
+    }
+}
+
+/* ===== телефоны ===== */
+@media (max-width: 768px) {
+    .wrap { padding: 0 16px; }
+
+    .page-hero { padding: 92px 0 30px; }
+
+    .page-title { margin: 10px 0; font-size: 32px; }
+
+    .page-lead { margin-bottom: 20px; font-size: 16px; line-height: 1.5; }
+
+    .hero-actions .btn { flex: 1; padding: 13px 16px; }
+
+    .hero-stats { margin-top: 20px; gap: 8px; }
+    .chip { padding: 7px 12px; font-size: 13px; }
+
+    .section { padding: 36px 0; }
+    .section-title { font-size: 24px; }
+    .section-sub { margin-bottom: 20px; font-size: 14px; }
+
+    .grid { gap: 12px; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .grid-2 { grid-template-columns: 1fr; }
+
+    /* 4 карточки 2x2: компактно */
+    .grid-4 .card { padding: 16px; border-radius: 16px; }
+    .grid-4 .card-icon { margin-bottom: 8px; font-size: 26px; }
+    .grid-4 .card h3 { font-size: 15px; }
+    .grid-4 .card p { font-size: 13px; }
+
+    /* карточки-преимущества: одна строка «иконка + заголовок» */
+    .grid-3 .card:not(.vac) {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        column-gap: 14px;
+        align-items: center;
+        padding: 14px 16px;
+    }
+
+    .grid-3 .card:not(.vac) .card-icon { margin: 0; font-size: 28px; }
+    .grid-3 .card:not(.vac) p { display: none; }
+
+    /* короткие подзаголовки секций на телефоне не нужны */
+    .section:not(#request):not(#apply) .section-sub { display: none; }
+    .section-title { margin-bottom: 16px; }
+
+    .faq summary { padding: 15px 28px 15px 0; font-size: 15px; }
+
+    .form-card { padding: 20px 16px; border-radius: 18px; }
+    .form-grid { grid-template-columns: 1fr; gap: 12px; }
+
+    /* вакансии: одна компактная строка на вакансию */
+    .vac {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+
+    .vac p { display: none; }
+    .vac .btn { flex-shrink: 0; margin-top: 0; align-self: center; }
+    .vac-head { min-width: 0; gap: 6px; }
+    .vac h3 { font-size: 16px; }
+
+    .map-box, .map-box iframe { min-height: 220px; }
+
+    .grid-4.contact-cards .card a { font-size: 13px; }
+}
+
+@media (max-width: 380px) {
+    .page-title { font-size: 28px; }
+    .grid-4 { grid-template-columns: 1fr; }
+}
+
+@media (hover: none) {
+    .card:hover,
+    .btn:hover { transform: none; }
+}
